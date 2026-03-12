@@ -32,6 +32,20 @@ Ensure your LockdownAlert.ps1 contains the specific message you wish to show the
 2. ePO Integration
 Check the .zip package into your ePO Master Repository.
 
+----------------------------------------------------------------------------------------------------------------------------------------
+**Customizing the Popup Message**
+If you need to modify the popup notification content, follow these steps:
+Extract the provided ZIP package.
+Open the file RunAlert.cmd using a text editor such as Notepad++.
+Update the popup message or any required parameters as needed.
+Save the changes.
+Recreate the EEDK package using the modified .cmd file.
+
+Important:
+Ensure that ServiceUI.exe remains in the same folder as RunAlert.cmd when creating the new EEDK package. The script relies on ServiceUI.exe to launch the popup in the active user session.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
 Create a Product Deployment Task.
 Target your desired System Tree groups or specific tags.
 Schedule the task to "Run Immediately" or at your preferred interval.
